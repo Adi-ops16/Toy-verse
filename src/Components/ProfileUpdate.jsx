@@ -1,5 +1,5 @@
 import React, { use } from "react";
-import { AuthContext } from "../provider/AuthProvider";
+import { AuthContext } from '../Context/AuthContext';
 import Swal from "sweetalert2";
 
 const ProfileUpdate = () => {

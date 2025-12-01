@@ -1,10 +1,10 @@
 import React, { use } from "react";
 import { Link, useParams } from "react-router";
 import noToysFound from "../assets/notoysfound.jpg";
-import { ToysContext } from "../provider/ToysProvider";
 import SkeletonLoader from "../Components/Loaders/SkeletonLoader";
 import ToysCategory from "../Components/ToysCategory";
 import { ReTitle } from "re-title";
+import { ToysContext } from "../Context/ToysContext";
 
 const ToysByCategory = () => {
     const { category } = useParams();

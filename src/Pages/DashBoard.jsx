@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import { ToysContext } from '../provider/ToysProvider';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend, } from 'recharts';
 import { Star, Package, Award, TrendingUp } from 'lucide-react';
 import { ReTitle } from 're-title';
+import { ToysContext } from '../Context/ToysContext';
 
 const Dashboard = () => {
     const { toys } = useContext(ToysContext);

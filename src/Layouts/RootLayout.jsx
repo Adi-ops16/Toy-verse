@@ -21,7 +21,7 @@ const RootLayout = () => {
 
     return (
         <div className='flex flex-col min-h-screen bg-base-200'>
-            <header className='sticky top-0 z-10'>
+            <header className='sticky top-0 z-50'>
                 <Navbar></Navbar>
             </header>
             <main>

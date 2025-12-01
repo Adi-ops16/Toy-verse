@@ -1,9 +1,9 @@
 import React, { use } from 'react';
 import { useNavigate, useParams } from 'react-router';
-import { ToysContext } from '../provider/ToysProvider';
 import { ChevronLeft, StarHalfIcon, StarIcon } from 'lucide-react';
 import Swal from 'sweetalert2';
 import { ReTitle } from 're-title';
+import { ToysContext } from '../Context/ToysContext';
 
 const ToyDetails = () => {
     const { id } = useParams();

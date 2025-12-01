@@ -1,12 +1,14 @@
-import React, { createContext, useEffect, useState } from 'react';
-export const ToysContext = createContext()
+import React, { useEffect, useState } from 'react';
+import { ToysContext } from '../Context/ToysContext';
+
 const ToysProvider = ({ children }) => {
+
     const [toys, setToys] = useState([])
     const [loading, setLoading] = useState(true)
     // toys data fetch
     useEffect(() => {
         const fetchToys = async () => {
-            const res = await fetch("/toys.json")
+            const res = await fetch(`/toys.json?v2=${Date.now()}`)
             const toys = await res.json()
             setTimeout(() => {
                 setToys(toys)
@@ -24,9 +26,9 @@ const ToysProvider = ({ children }) => {
     }
 
 
-    return <ToysContext.Provider value={toysData}>
+    return <ToysContext value={toysData}>
         {children}
-    </ToysContext.Provider>
+    </ToysContext>
 };
 
 export default ToysProvider;

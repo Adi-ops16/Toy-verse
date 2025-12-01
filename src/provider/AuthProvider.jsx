@@ -1,8 +1,7 @@
-import React, { createContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { app } from '../Firebase.config';
 import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth'
-import { ToysContext } from './ToysProvider';
-export const AuthContext = createContext()
+import { AuthContext } from '../Context/AuthContext';
 const auth = getAuth(app)
 const googleProvider = new GoogleAuthProvider()
 const AuthProvider = ({ children }) => {

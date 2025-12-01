@@ -1,5 +1,4 @@
 import React, { use, useState } from 'react';
-import { ToysContext } from '../provider/ToysProvider';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectCoverflow, Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -7,6 +6,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
 import { Link } from 'react-router';
 import { ChevronRight } from 'lucide-react';
+import { ToysContext } from '../Context/ToysContext';
 
 const Slider = () => {
     const [activeIndex, setActiveIndex] = useState(0);

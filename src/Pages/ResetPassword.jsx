@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
-import { AuthContext } from "../provider/AuthProvider";
+import { AuthContext } from '../Context/AuthContext';
 import { useLocation, useNavigate } from "react-router";
 import Swal from "sweetalert2";
 import { Mail } from "lucide-react";

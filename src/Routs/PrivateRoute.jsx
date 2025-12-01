@@ -1,8 +1,8 @@
 import React, { use } from 'react';
-import { AuthContext } from '../provider/AuthProvider';
+import { AuthContext } from '../Context/AuthContext';
 import { Navigate, useLocation } from 'react-router';
-import { ToysContext } from '../provider/ToysProvider';
 import RingLoaderC from '../Components/Loaders/RingLoaderC';
+import { ToysContext } from '../Context/ToysContext';
 
 const PrivateRoute = ({ children }) => {
     const { user } = use(AuthContext)

@@ -1,9 +1,9 @@
 import React, { use } from 'react';
 import logo from '../assets/logo.png';
 import { Link, NavLink } from 'react-router';
-import { AuthContext } from '../provider/AuthProvider';
 import Swal from 'sweetalert2';
 import RingLoaderW from './Loaders/RingLoaderW';
+import { AuthContext } from '../Context/AuthContext';
 
 const Navbar = () => {
     const { user, logOut, authLoading } = use(AuthContext);
@@ -52,7 +52,7 @@ const Navbar = () => {
                     <div
                         tabIndex={0}
                         role="button"
-                        className="btn btn-ghost text-[#6f4e37] lg:hidden z-50"
+                        className="btn btn-ghost text-[#6f4e37] lg:hidden"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"

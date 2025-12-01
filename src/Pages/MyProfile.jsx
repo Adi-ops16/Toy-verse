@@ -1,5 +1,5 @@
 import React, { use, useEffect, useState } from "react";
-import { AuthContext } from "../provider/AuthProvider";
+import { AuthContext } from '../Context/AuthContext';
 import Swal from "sweetalert2";
 import ProfileUpdate from "../Components/ProfileUpdate";
 import { ReTitle } from "re-title";

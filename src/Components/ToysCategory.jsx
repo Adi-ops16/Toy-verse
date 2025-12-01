@@ -1,6 +1,6 @@
 import React, { use } from 'react';
-import { ToysContext } from '../provider/ToysProvider';
 import { NavLink } from 'react-router';
+import { ToysContext } from '../Context/ToysContext';
 
 const ToysCategory = () => {
     const { toys } = use(ToysContext);

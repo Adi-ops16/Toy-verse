@@ -1,11 +1,11 @@
 import React, { use, useState } from 'react';
 import loginImg from '../assets/login.jpg';
 import { Link, useLocation, useNavigate } from 'react-router';
-import { AuthContext } from '../provider/AuthProvider';
 import Swal from 'sweetalert2';
-import { ToysContext } from '../provider/ToysProvider';
 import { Eye, EyeClosed, EyeOff } from 'lucide-react';
 import { ReTitle } from 're-title';
+import { ToysContext } from '../Context/ToysContext';
+import { AuthContext } from '../Context/AuthContext';
 
 const Registration = () => {
     const { createUser, setUser, handleGoogleAuth, updateUser } = use(AuthContext);

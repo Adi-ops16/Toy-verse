@@ -1,7 +1,7 @@
 import React, { use } from 'react';
-import { ToysContext } from '../provider/ToysProvider';
 import SkeletonLoader from './Loaders/SkeletonLoader';
 import { Link } from 'react-router';
+import { ToysContext } from '../Context/ToysContext';
 
 const FeaturedToys = () => {
     const { toys, loading } = use(ToysContext);
