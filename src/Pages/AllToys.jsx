@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import React, { use, useState } from 'react';
 import { ToysContext } from '../provider/ToysProvider';
 import SkeletonLoader from '../Components/Loaders/SkeletonLoader';
 import { Link } from 'react-router';
@@ -7,6 +7,9 @@ import { ReTitle } from 're-title';
 
 const AllToys = () => {
     const { toys, loading } = use(ToysContext);
+    const [search, setSearch] = useState("")
+
+    const searchedToys = toys.filter(t => t.toyName.toLowerCase().includes(search)) || toys
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-8 py-10 px-4 lg:px-8 bg-[#FFF9EC]">
@@ -19,18 +22,38 @@ const AllToys = () => {
 
             {/* All Toys Section */}
             <section className="md:col-span-3 lg:col-span-5 space-y-6">
-                <div className="flex items-center justify-between border-b-2 border-[#E1AD01]/60 pb-3">
-                    <h1 className="text-3xl font-extrabold text-[#6f4e37] tracking-wide">
+                <div className="flex flex-wrap items-center justify-between border-b-2 border-[#E1AD01]/60 pb-3">
+                    <h1 className="text-3xl font-extrabold text-[#6f4e37] tracking-wide mb-2">
                         All Toys
                     </h1>
-                    <div className="h-1 w-24 bg-[#E1AD01] rounded-full"></div>
+                    <div>
+                        <label className="input focus-within:outline-0 focus-within:border-2 border rounded-2xl border-[#5b3f2c] bg-[#FFF9EC]">
+                            <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <g
+                                    strokeLinejoin="round"
+                                    strokeLinecap="round"
+                                    strokeWidth="2.5"
+                                    fill="none"
+                                    stroke="currentColor"
+                                >
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <path d="m21 21-4.3-4.3"></path>
+                                </g>
+                            </svg>
+                            <input
+                                onChange={(e) => setSearch(e.target.value.toLowerCase())}
+                                type="search"
+                                className="grow"
+                                placeholder="Search" />
+                        </label>
+                    </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
                     {loading ? (
                         <SkeletonLoader />
                     ) : (
-                        toys.map((toy) => (
+                        searchedToys.map((toy) => (
                             <div
                                 key={toy.toyId}
                                 className="card bg-linear-to-b from-[#FFFBEA] to-[#FFF5D7] border border-[#FFE8A3]/50 

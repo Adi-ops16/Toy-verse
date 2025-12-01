@@ -1,13 +1,15 @@
 import React from "react";
-import { ToyBrick, Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { ToyBrick, Phone, Mail, MapPin } from "lucide-react";
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
     return (
         <footer className="bg-linear-to-b from-[#e1ad01] to-[#f8e8a0] text-[#6f4e37] font-semibold">
             {/* Main Footer */}
-            <div className="footer sm:footer-horizontal flex-wrap px-10 py-12 max-w-7xl mx-auto gap-10">
+            <div className="footer sm:footer-horizontal px-10 py-12 max-w-7xl mx-auto gap-10">
                 {/* About Section */}
-                <aside className="flex-1 min-w-[250px]">
+                <aside className="">
                     <div className="flex items-center gap-2 mb-3">
                         <ToyBrick size={26} className="text-[#6f4e37]" />
                         <h2 className="text-2xl font-bold">ToyVerse</h2>
@@ -22,15 +24,23 @@ const Footer = () => {
                     </div>
                     {/* Social Media */}
                     <div className="flex items-center gap-4 mt-4">
-                        <a href="#" className="hover:text-[#d18c00]"><Facebook size={20} /></a>
-                        <a href="#" className="hover:text-[#d18c00]"><Twitter size={20} /></a>
-                        <a href="#" className="hover:text-[#d18c00]"><Instagram size={20} /></a>
-                        <a href="#" className="hover:text-[#d18c00]"><Linkedin size={20} /></a>
+                        <a href="https://www.facebook.com/" target="_blank" className="hover:text-[#d18c00]">
+                            <FaFacebook size={20} />
+                        </a>
+                        <a href="https://x.com/home" target="_blank" className="hover:text-[#d18c00]">
+                            <FaXTwitter size={20} />
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" className="hover:text-[#d18c00]">
+                            <FaInstagram size={20} />
+                        </a>
+                        <a href="https://www.linkedin.com/" target="_blank" className="hover:text-[#d18c00]">
+                            <FaLinkedin size={20} />
+                        </a>
                     </div>
                 </aside>
 
                 {/* Services */}
-                <nav className="flex-1 min-w-[150px]">
+                <nav className="">
                     <h6 className="footer-title text-lg mb-2">Services</h6>
                     <a className="link link-hover">Branding</a>
                     <a className="link link-hover">Design</a>
@@ -39,7 +49,7 @@ const Footer = () => {
                 </nav>
 
                 {/* Company */}
-                <nav className="flex-1 min-w-[150px]">
+                <nav className="">
                     <h6 className="footer-title text-lg mb-2">Company</h6>
                     <a className="link link-hover">About us</a>
                     <a className="link link-hover">Contact</a>
@@ -48,7 +58,7 @@ const Footer = () => {
                 </nav>
 
                 {/* Legal */}
-                <nav className="flex-1 min-w-[150px]">
+                <nav className="">
                     <h6 className="footer-title text-lg mb-2">Legal</h6>
                     <a className="link link-hover">Terms of use</a>
                     <a className="link link-hover">Privacy policy</a>

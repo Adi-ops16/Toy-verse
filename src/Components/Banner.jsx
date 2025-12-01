@@ -27,7 +27,7 @@ const Banner = () => {
 
                 <Link
                     to="/all-toys"
-                    className="btn bg-[#6f4e37] hover:bg-[#5b3f2c] text-white border-0 shadow-md hover:shadow-lg transition-all duration-300 flex items-center gap-2"
+                    className="btn bg-[#6f4e37] hover:bg-[#5b3f2c] text-white border-0 shadow-md hover:shadow-lg transition-all duration-300 flex items-center gap-2 mb-2"
                 >
                     Shop Now <ShoppingCart size={20} />
                 </Link>

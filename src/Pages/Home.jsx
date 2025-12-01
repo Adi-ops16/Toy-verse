@@ -5,18 +5,20 @@ import FeaturedToys from '../Components/FeaturedToys';
 import NewsLetter from '../Components/NewsLetter';
 import Slider from '../Components/Slider';
 import ToysCategory from '../Components/ToysCategory';
+import HowItWorks from '../Components/HowItWorks';
+import FAQ from '../Components/FAQ';
 
 const Home = () => {
     return (
-        <div className="overflow-hidden bg-[#FFF9EC] text-[#3b2f2f]">
+        <div className="overflow-hidden text-[#3b2f2f] max-w-7xl mx-auto">
             {/* title */}
             <ReTitle title='Home | Toy Verse'></ReTitle>
             {/* Banner */}
-            <section className="max-w-6xl mx-auto my-10 px-4">
+            <section className="my-10 px-4">
                 <Banner />
             </section>
             {/* slider */}
-            <section className="max-w-6xl mx-auto my-16 px-4">
+            <section className="my-16 px-4">
                 <h2 className="text-center text-3xl md:text-4xl font-extrabold text-[#6f4e37] mb-8 tracking-wide">
                     Featured Collection
                 </h2>
@@ -25,7 +27,7 @@ const Home = () => {
             {/* featured toys + toys category */}
             <section
                 data-aos="fade-up"
-                className="my-20 bg-linear-to-b from-[#fffaf0] to-[#fff5e1] rounded-3xl shadow-lg border border-[#ffe6a7]/60 p-6 md:p-8 lg:p-10 max-w-full"
+                className="my-20 bg-linear-to-b from-[#fffaf0] to-[#fff5e1] rounded-3xl shadow-lg border border-[#ffe6a7]/60 p-6 md:p-8 lg:p-10"
             >
                 <div className="w-full">
                     <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6 min-h-screen">
@@ -49,11 +51,19 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+            {/* how it works */}
+            <section>
+                <HowItWorks></HowItWorks>
+            </section>
             {/* Achievements*/}
-            <section data-aos="fade-up" className="max-w-6xl mx-auto my-20 px-4">
+            <section data-aos="fade-up" className="my-5 lg:my-20 px-4">
                 <div className="bg-white/70 backdrop-blur-sm border border-[#ffd166]/40 rounded-3xl shadow-md p-8 md:p-12 text-center">
                     <Achievement />
                 </div>
+            </section>
+            {/* FAQ */}
+            <section>
+                <FAQ></FAQ>
             </section>
             {/*Newsletter*/}
             <section

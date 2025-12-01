@@ -36,27 +36,23 @@ const Navbar = () => {
             <li>
                 <NavLink to="/about">About Us</NavLink>
             </li>
-            {user && (
-                <>
-                    <li>
-                        <NavLink to="/auth/my-profile">Profile</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/auth/dashboard">Dashboard</NavLink>
-                    </li>
-                </>
-            )}
+            <li>
+                <NavLink to="/auth/my-profile">Profile</NavLink>
+            </li>
+            <li>
+                <NavLink to="/auth/dashboard">Dashboard</NavLink>
+            </li>
         </>
     );
 
     return (
-        <div className="navbar sticky top-0 z-50 bg-linear-to-r from-[#E1AD01] via-[#F3D778] to-[#E1AD01] shadow-lg">
+        <div className="navbar sticky top-0 bg-linear-to-r from-[#E1AD01] via-[#F3D778] to-[#E1AD01] shadow-lg">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div
                         tabIndex={0}
                         role="button"
-                        className="btn btn-ghost text-[#6f4e37] lg:hidden"
+                        className="btn btn-ghost text-[#6f4e37] lg:hidden z-50"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
