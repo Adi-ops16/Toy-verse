@@ -1,0 +1,77 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@plugin "daisyui/theme" {
+  name: "toy-store";
+  default: true;
+  color-scheme: light;
+
+  --primary: #FF8C00;
+  /* cheerful orange */
+  --secondary: #FFD700;
+  /* golden yellow */
+  --accent: #4CAF50;
+  /* soft green for trust */
+  --neutral: #333C4D;
+  /* neutral gray */
+  --base-100: #FFF8E1;
+  /* creamy background */
+  --base-200: #FFECB3;
+  /* light yellow cards */
+  --base-content: #1A1A1A;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.poppins {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+
+.permanent {
+  font-family: "Permanent Marker", cursive;
+  font-style: normal;
+}
+
+.active {
+  @apply text-[#6f4e37] relative font-bold;
+}
+
+.active::after {
+  content: '';
+  @apply absolute left-0 bottom-0 w-full h-[3px] bg-[#6f4e37] rounded-full;
+}
+
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeRightSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeInSlide {
+  opacity: 1;
+  animation: fadeInSlide 2.5s ease forwards;
+}
+
+.fadeRightSlide {
+  opacity: 1;
+  animation: fadeRightSlide 2.5s ease forwards;
+}
